@@ -14,7 +14,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 
 	/* Find the sibling of the node's parent */
 	if (node->parent->parent->left == node->parent)
-		return (node->parent->parent->right); /* Parent is left child, uncle is right child */
+		return (node->parent->parent->right); /* Parent=left, uncle=right */
 	else
-		return (node->parent->parent->left); /* Parent is right child, uncle is left child */
+		return (node->parent->parent->left); /* Parent=right, uncle=left */
 }
