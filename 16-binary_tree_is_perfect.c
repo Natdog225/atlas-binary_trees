@@ -31,7 +31,7 @@ size_t binary_tree_height(const binary_tree_t *tree)
  *
  * Return: 1 if the subtree is perfect, 0 otherwise
  */
-static int _is_perfect_recursive\
+static int _is_perfect_recursive
 (const binary_tree_t *tree, size_t depth, size_t level)
 {
 	if (tree == NULL)
