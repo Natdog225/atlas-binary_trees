@@ -31,12 +31,13 @@ size_t binary_tree_height(const binary_tree_t *tree)
  *
  * Return: 1 if the subtree is perfect, 0 otherwise
  */
-static int _is_perfect_recursive(const binary_tree_t *tree, size_t depth, size_t level)
+static int _is_perfect_recursive\
+(const binary_tree_t *tree, size_t depth, size_t level)
 {
 	if (tree == NULL)
 		return (0);
 
-	/* If it's a leaf node, check if it's at the expected depth for a perfect tree */
+	/* If it's a leaf node, check if it at the exp depth for a perfect tree */
 	if (tree->left == NULL && tree->right == NULL)
 		return (level == depth ? 1 : 0);
 
@@ -45,7 +46,7 @@ static int _is_perfect_recursive(const binary_tree_t *tree, size_t depth, size_t
 		return (_is_perfect_recursive(tree->left, depth, level + 1) &&
 				_is_perfect_recursive(tree->right, depth, level + 1));
 
-	return (0); /* If one child is NULL and the other isn't, or if children aren't perfect, it's not perfect */
+	return (0); /* If one child is NULL and the other isn't, it's not perfect */
 }
 
 /**
